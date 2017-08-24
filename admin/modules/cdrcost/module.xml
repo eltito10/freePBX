@@ -1,0 +1,35 @@
+<module>
+	<rawname>cdrcost</rawname>
+	<name>Call Cost</name>
+	<version>0.4</version>
+	<description>
+		Allows configuration of call cost for different destinations and after that assing cost for each CDR records.
+                
+		For example, you can assing different cost for mobile and landline calls.
+	</description>
+	<type>tool</type>
+	<category>Call Cost</category>
+	<menuitems>
+		<zonegroup sort="1">Zone Group</zonegroup>
+		<zone sort="2">Zone</zone>
+		<schedule sort="3">Schedule</schedule>
+		<schedulepart sort="4">Schedule Part</schedulepart>
+		<rate sort="5">Rate</rate>
+		<maint sort="6">Maintenance</maint>
+	</menuitems>
+	<location>release/2.2/cdrcost-0.4.tgz</location>
+	<info>http://www.aussievoip.com/wiki/freePBX-CDRCost</info>
+	<attention>
+		If you'd like to automaticaly generate and keep up-to-date cdrcost table 
+		link cdrcost into /etc/cron.d/ eg:
+		ln -s /var/www/html/admin/modules/cdrcost/cdrcost /etc/cron.d/
+		this script will generate asteriskcdrdb's cdrcost table record up-to-date. 
+	</attention>
+	<changelog>
+		*0.4 a few bugfix based on response.
+		*0.1* First release
+	</changelog>
+	<location>release/cdrcost-0.4.tgz</location>
+	<md5sum>6cc43a407f82acb6e2b42452fa7fb6b2</md5sum>
+</module>
+

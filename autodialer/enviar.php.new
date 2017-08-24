@@ -1,0 +1,98 @@
+<?php
+/*
+Genera archivos call con datos de archivo csv 
+*/
+    //borra archivos de envio anterior
+    $dir = '/var/spool/asterisk/outgoing_done/';
+    foreach(glob($dir.'*.*') as $v){
+    unlink($v);
+    }
+    $cont = 1;
+    $channel = $_POST['CHANNEL'];
+    $handle = fopen("temporal.csv",'r');
+    if ($handle)
+    {
+        while (($data = fgetcsv($handle, 5000, ",")) !== FALSE)
+        {
+	    if($data[4] == "1")
+	    {
+            $generado = fopen("origen/arch".strval($cont).".call",'w');
+            fwrite($generado, 'Channel: '.$channel.'/'.$data[3].chr(10).
+            'MaxRetries: 1'.chr(10).
+            'RetryTime: 60'.chr(10).
+            'Set: DEST='.$data[3].','.$data[2].chr(10).
+            'Context: autodial1'.chr(10).
+            'Extension: s'.chr(10).
+            'Priority: 1'.chr(10).
+            'Archive: Yes').chr(10);
+            fclose($generado);
+	    $cont++;
+	    }
+	    else
+	    {
+		if($data[5] != "")
+		{
+	    	$generado = fopen("origen/arch".strval($cont).".call",'w');
+            	fwrite($generado, 'Channel: DAHDI/G2/'.$data[3].chr(10).
+            	'MaxRetries: 1'.chr(10).
+            	'RetryTime: 60'.chr(10).
+            	'Set: DEST='.$data[3].','.$data[5].','.$data[6].chr(10).
+            	'Context: autodial2'.chr(10).
+            	'Extension: s'.chr(10).
+            	'Priority: 1'.chr(10).
+            	'Archive: Yes').chr(10);
+            	fclose($generado);
+            	$cont++;
+	    	}
+		else
+		{
+                $generado = fopen("origen/arch".strval($cont).".call",'w');
+                fwrite($generado, 'Channel: DAHDI/G2/'.$data[3].chr(10).
+                'MaxRetries: 1'.chr(10).
+                'RetryTime: 60'.chr(10).
+                'Set: DEST='.$data[3].chr(10).
+                'Context: autodial3'.chr(10).
+                'Extension: s'.chr(10).
+                'Priority: 1'.chr(10).
+                'Archive: Yes').chr(10);
+                fclose($generado);
+                $cont++;
+		}
+	    }
+        }
+    echo "<div align='center'>";
+    echo $cont - 1;
+    echo " mensajes enviados.";
+    echo "</div>";
+    }
+?>
+
+<html>
+<SCRIPT language="JavaScript">
+function OnSubmitForm()
+{
+  if(document.pressed == 'Volver')
+  {
+   document.myform.action ="index.html";
+  }
+  else
+  if(document.pressed == 'Reporte')
+  {
+    document.myform.action ="genrepo.php";
+  }
+  return true;
+}
+</SCRIPT>
+<head>
+    <title>Autodialer</title>
+</head>
+<body>
+<FORM name="myform" onSubmit="return OnSubmitForm();">
+<p align="center">
+<INPUT TYPE="SUBMIT" name="Volver" onClick="document.pressed=this.value" VALUE="Volver">
+<INPUT TYPE="SUBMIT" name="Reporte" onClick="document.pressed=this.value" VALUE="Reporte">
+</p>
+</FORM>
+
+</body>
+</html>

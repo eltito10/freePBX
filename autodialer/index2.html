@@ -1,0 +1,129 @@
+<html>
+<SCRIPT language="JavaScript">
+function OnSubmitForm()
+{
+  if(document.pressed == 'Reporte')
+  {
+   document.myform.action ="genrepo.php";
+  }
+  else
+  if(document.pressed == 'Detener')
+  {
+    document.myform.action ="cancela.html";
+  }
+  else
+  if(document.pressed == 'Continuar')
+  {
+    document.myform.action ="lista.php";
+  }
+  return true;
+}
+</SCRIPT>
+
+<head>
+    <title>Autodialer</title>
+</head>
+<body>
+<form name="myform" enctype="multipart/form-data" method="POST" onSubmit="return OnSubmitForm();">
+<input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+<p align="center">
+<img src="logo_3c.jpg"><br>
+<b>AUTODIALER</b>
+<br><br>
+Elija el archivo a subir: <input name="archivo" type="file" /><br />
+<br>
+<small><font color="333333"><i> Use formato csv indicando: IdDeudor, Negocio, Numero_telefonico (opcional)</i></font></small>
+</p>
+<div align="center"><hr><br>
+Elija el tipo de telefono a usar:
+<br>
+<input type="radio" name="PHONE" value="Casa" checked> Casa<br>
+<input type="radio" name="PHONE" value="Celular"> Celular<br>
+<input type="radio" name="PHONE" value="Trabajo"> Trabajo<br>
+<br><hr><br>
+<input type="checkbox" name="IVR" value="1"> Enviar a IVR<br>
+<small><font color="333333"><i>Si elige esta opcion, agregue en la grabacion los siguientes mensajes:<br><br>
+<li>Marque 1 para comunicarle con un agente en este momento.<br></i></font></small><br>
+Elija cantidad de agentes que contestaran:
+<select name="AGENTS">
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3" selected>3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+             <option value="6">6</option>
+             <option value="7">7</option>
+             <option value="8">8</option>
+             <option value="9">9</option>
+             <option value="10">10</option>
+</select><br><br>
+<small><font color="333333"><i>
+<li>Marque 2 para llamarle mas tarde.<br><br>
+<li>Marque 3 para no volver a llamarle.
+</i></font></small>
+<br>
+<hr>
+Elija el archivo de audio a usar: <input name="audio" type="file" /><br />
+<br>
+<small><font color="333333"><i>Use archivo wav generado con: <a href="http://www2.research.att.com/~ttsweb/tts/demo.php">demo-tts</a></i></font></small>
+<br>
+<div align="center">
+<br><hr>Opciones de salida:<br>
+<table border="0">
+<tr><td>
+MPM:
+<select name="CHANNELS">
+             <option value="1">1</option> 
+             <option value="2">2</option> 
+             <option value="3">3</option> 
+             <option value="4">4</option> 
+             <option value="5">5</option> 
+             <option value="6">6</option> 
+             <option value="7">7</option> 
+             <option value="8">8</option> 
+             <option value="9">9</option> 
+             <option value="10">10</option> 
+             <option value="11">11</option> 
+             <option value="12">12</option> 
+             <option value="13">13</option> 
+             <option value="14">14</option> 
+             <option value="15" selected>15</option> 
+             <option value="16">16</option> 
+             <option value="17">17</option> 
+             <option value="18">18</option> 
+             <option value="19">19</option> 
+             <option value="20">20</option> 
+             <option value="20">21</option> 
+             <option value="20">22</option> 
+             <option value="20">23</option> 
+             <option value="20">24</option> 
+             <option value="20">25</option> 
+             <option value="20">26</option> 
+             <option value="20">27</option> 
+             <option value="20">28</option> 
+             <option value="20">29</option> 
+             <option value="20">30</option> 
+</select>
+</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+Troncal:
+<select name="TRUNK">
+             <option value="DAHDI/G0">PRIMARIO1</option>
+             <option value="DAHDI/G2" selected>PRIMARIO2</option>
+             <option value="SIP/7471009999">CELULAR</option>
+</select>
+</td></tr>
+</table>
+<br>
+</div>
+<div align="center">
+<br><hr><br>
+</div>
+<div align="center">
+<INPUT TYPE="submit" name="reporte" onClick="document.pressed=this.value" VALUE="Reporte">
+<INPUT TYPE="submit" name="detener" onClick="document.pressed=this.value" VALUE="Detener">
+<INPUT TYPE="submit" name="enviar" onClick="document.pressed=this.value" VALUE="Continuar">
+</div>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,7 @@
+#
+# cron-jobs for cdrcost
+#
+
+MAILTO=root
+
+*/5 * * * *	asterisk	php /var/www/html/admin/modules/cdrcost/generator.php &>/dev/null

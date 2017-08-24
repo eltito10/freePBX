@@ -1,0 +1,4 @@
+If you'd like to automaticaly generate and keep up-to-date cdrcost table 
+link cdrcost into /etc/cron.d/ eg:
+ln -s /var/www/html/admin/modules/cdrcost/cdrcost /etc/cron.d/
+this script will generate asteriskcdrdb's cdrcost table record up-to-date.

@@ -1,0 +1,111 @@
+/* AQUI VAN LAS ETIQUETAS GENERALES*/
+/*  ----------------------------------------------------- */
+/*BODY { background-color: #EDEDED; font-family: Arial; font-size:9px; }*/
+BODY { background-color:rgb(255,255,255);font-family: Arial; font-size:9px; }
+/*BODY { background-color:rgb(203,216,184);font-family: Arial; font-size:9px; }
+/*  ===================================================== */
+
+
+/* AQUI VAN LAS ETIQUETAS PARA ELEMENTOS EN PARTICULAR */
+/*  ---------------------------------------------------- */
+SELECT { font-family: Arial; font-size:9px; }
+SELECT.resaltar { font-family: Arial; font-size:9px; background-color: #0000FF; color: #FFFFFF; font-weight: bold}
+SELECT.resaltarceleste { font-family: Arial; font-size:9px; background-color: rgb(204,255,255); color: rgb(204,0,0); font-weight: bold}
+SELECT.resaltaramarillo { font-family: Arial; font-size:9px; background-color: rgb(255,255,153); color: rgb(0,0,0); font-weight: bold}
+
+
+H1 { font-family: Arial; font-size:12px; background-color: #0000FF; color: #FFFFFF; font-weight: bold}
+
+
+INPUT { font-family: Arial; font-size:9px; } 
+INPUT.resaltar { font-family: Arial; font-size:9px; background-color: #0000FF; color: #FFFFFF; font-weight: bold}
+INPUT.resaltarceleste { font-family: Arial; font-size:9px; background-color: rgb(204,255,255); color: rgb(204,0,0); font-weight: bold}
+INPUT.resaltaramarillo { font-family: Arial; font-size:9px; background-color: rgb(255,255,153); color: rgb(0,0,0); font-weight: bold}
+
+
+FONT.resaltar {font-weight:bold; color: #FFFFFF}
+SPAN.resaltar {background-color: #0000FF}
+FONT.especial {font-weight:bold; font-size:11px; color: #FFFFFF}
+SPAN.especial {background-color: #FF0000}
+SPAN.blanco {background-color: #FFFFFF}
+SPAN.celeste {background-color: rgb(204,255,255)}
+SPAN.rojo {background-color: rgb(255,0,0)}
+FONT.negrita {font-weight:bold; font-size:11px; color: #000000}
+
+
+/* CARACTERISTICAS DE LOS ENLACES*/
+/*  -----------------------------*/
+
+A:link {font-family: Arial; font-size:11px; color:white}
+A:visited {font-family: Arial; font-size:11px; color:white}
+A:link.menu {font-family: Arial; font-size:11px; color:rgb(36,36,36)}
+A:visited.menu {font-family: Arial; font-size:11px; color:rgb(36,36,36)}
+/*A:link.menu {font-family: Arial; font-size:11px; color:rgb(0,0,240)}
+A:visited.menu {font-family: Arial; font-size:11px; color:rgb(0,0,240)}*/
+A:link.paginacion {font-family: Arial; font-size:11px; color:#996633}
+A:visited.paginacion {font-family: Arial; font-size:11px; color:purple}
+
+
+
+/* AQUI VAN LAS ETIQUETAS QUE TENGAN QUE VER CON LOS DIVS*/
+/*  ----------------------------------------------------------------------------------------*/
+DIV { text-align}
+
+/* Este es el DIV para las gestiones */
+DIV.gestion { text-align: left; overflow: auto; width:920;  height:115; border: 1px solid #000000;  }
+DIV.gestion80 { text-align: left; overflow: auto; width:920;  height:80; border: 1px solid #000000;  }
+DIV.gestion180 { text-align: left; overflow: auto; width:920;  height:180; border: 1px solid #000000;  }
+DIV.gestion180x1000 { text-align: left; overflow: auto; width:1000;  height:180; border: 1px solid #000000;  }
+DIV.gestionancha { text-align: left; overflow: auto; width:1200;  height:180; border: 1px solid #000000;  }
+DIV.gestion180larga { text-align: left; overflow: auto; width:920;  height:300; border: 1px solid #000000;  }
+DIV.gestion180x1000larga { text-align: left; overflow: auto; width:1000;  height:300; border: 1px solid #000000;  }
+
+DIV.gestionpeque { text-align: left; overflow: auto; width:190;  height:120; border: 1px solid #000000;  }
+DIV.arrastrar { text-align: left; overflow: auto; width:280;  height:200; border: 1px solid #000000;  }
+DIV.arrastrar2 { text-align: left; overflow: auto; width:140;  height:200; border: 1px solid #000000;  }
+DIV.mitadtit { text-align: left; overflow: auto; width:450;  height:150; border: 1px solid #000000;  }
+DIV.mitad { text-align: left; overflow: auto; width:450;  height:400; border: 1px solid #000000;  }
+/*  ======================================================== */
+
+
+
+/* AQUI VAN LAS ETIQUETAS QUE TENGAN QUE VER CON TABLAS */
+/*  --------------------------------------------------------------------------------------- */
+TABLE {font-family: Arial; font-size:11px;   }
+TABLE.liquidacion {font-family: Arial; font-size:13px;   }
+/* Este es el TD para resaltar una celda*/
+/*TR.menu  {background-color:rgb(0,0,0)}
+TD.menu  {background-color:rgb(0,0,0)}  /*para guradar compatibilidad, pero no usar para nuevos cambios*/
+/*TR.menu  {background-color:rgb(140,198,63)}
+TD.menu  {background-color:rgb(140,198,63)}  /*para guradar compatibilidad, pero no usar para nuevos cambios*/
+/*TR.menu  {background-color:rgb(120,121,123)}
+TD.menu  {background-color:rgb(120,121,123)}  /*para guradar compatibilidad, pero no usar para nuevos cambios*/
+TR.menu  {background-color:rgb(93,135,40)}
+TD.menu  {background-color:rgb(93,135,40)}  /*para guradar compatibilidad, pero no usar para nuevos cambios*/
+TD.resaltar { font-weight:bold; color: #FFFFFF; background-color:red}
+TD.resaltarplomonegro { font-weight:bold; color: rgb(0,0,0); background-color:rgb(209,209,209)}
+TD.resaltarplomo { font-weight:bold; color: red; background-color:silver}
+TD.hora { font-weight:bold; color: red;}
+TD.final { border-bottom: 1px solid #000000; }
+TD.nro {text-align: rigth}
+TD.rojo {background-color:rgb(255,0,0)  }
+TD.verde {background-color:rgb(0,255,51)}
+TD.plomo {background-color:rgb(192,192,192)}
+TD.celeste {background-color:rgb(221,230,251) }
+TD.amarillo {background-color:rgb(255,255,51)}
+
+
+/*  ===================================================== */
+
+
+
+/* AQUI VAN LAS ETIQUETAS PARA CASOS EN PARTICULAR */
+/*  ---------------------------------------------------- */
+
+.general { font-family: Arial; font-size:11px; }
+
+/*  ==================================================== */
+
+/* ALGUNOS CODIGOS DE COLOR */
+/* NEGRO = #000000, BLANCO = #FFFFFF, AMARILLO CLARO = #FFFFCC, UN VERDE CALRO = #CCFF99----- */
+/* PLOMO BIEN CLARO = #EDEDED,     */
